@@ -1,0 +1,31 @@
+<section class="section">
+  <div class="container">
+    <% if @facilities.count != 0 %>
+      <% @facilities.each do |facility| %>
+      <div class="card">
+        <div class="card-content">
+          <div class="media">
+            <div class="media-content">
+              <p class="title is-4">
+                <%= link_to facility.name, facility %>
+              </p>
+            </div>
+          </div>
+          <div class="content">
+            <h2>
+            <%= facility.description %>
+          </h2>
+          </div>
+          <!-- <div class="comment-count">
+              <span class="tag is-rounded">
+                <%  # Comment count%>
+              </span>
+            </div> -->
+        </div>
+      </div>
+      <% end %>
+    <% else %>
+      <h1>No Facilities</h1>  
+    <% end %>
+  </div>
+</section>

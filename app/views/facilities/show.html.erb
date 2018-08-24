@@ -1,0 +1,14 @@
+<div class="container">
+  <h2>
+    <%= @facility.name %>
+  </h2>
+  <h3>
+    <%= @facility.description %>
+  </h3>
+  <h4>
+    <%= @facility.status %>
+  </h4>
+  <%= link_to "Edit", edit_facility_path(@facility), class: "btn btn-primary" %>
+  <%= link_to "Delete", facility_path(@facility), method: :delete, data: { confirm: "Are you sure? "},class: "btn btn-danger" %>
+
+</div>
